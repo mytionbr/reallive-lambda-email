@@ -3,7 +3,7 @@
 module.exports.handler = async (event, context, callback) => {
   const userId = event.userName;
   const code = event.request.codeParameter
-  const link = `http://localhost:3000?userId=${userId}&confirmation_code=${code}`;
+  const link = `http://localhost:4200/verifyEmail/?userId=${userId}&code=${code}`;
   const template = (link, code) => `
  <html>
   <body>
